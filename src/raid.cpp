@@ -30,7 +30,12 @@
 namespace mega
 {
 
+// Needed for Windows Phone (MSVS 2013 - C++ version 9.8)
+#if defined(_WIN32) && defined(_MSC_VER) && __cplusplus < 201103L
+const unsigned RAID_ACTIVE_CHANNEL_FAIL_THRESHOLD = 5;
+#else
 constexpr unsigned RAID_ACTIVE_CHANNEL_FAIL_THRESHOLD = 5;
+#endif
 
 struct FaultyServers
 {
