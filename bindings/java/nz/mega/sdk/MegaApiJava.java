@@ -8010,5 +8010,5 @@ public class MegaApiJava {
 
     public int smsAllowedState(){
         return megaApi.smsAllowedState();
-    }
+    } 
 }
